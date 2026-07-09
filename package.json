@@ -1,0 +1,18 @@
+{
+  "name": "mkg2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for the Multi-dimensional Knowledge Graphs (MKG) workshop, ISWC 2026",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node build.js",
+    "deploy": "npm run build && gh-pages -d public -b pages"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

@@ -1,0 +1,25 @@
+<%- include('../partials/head', {title: 'Organizers'}) %>
+<%- include('../partials/nav') %>
+
+<main class="container py-5">
+  <h1>Organizers</h1>
+  <p class="lead">A multi-institution team spanning junior and senior researchers.</p>
+
+  <div class="row g-4">
+    <% for (let i = 1; i <= 5; i++) { %>
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h3 class="card-title h5">[TODO: Organizer <%= i %> name]</h3>
+          <h4 class="card-subtitle mb-2 text-muted h6">[TODO: affiliation]</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            [TODO: one-line bio.]</p>
+          <a href="#" class="card-link">[TODO: homepage link]</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
