@@ -2,6 +2,7 @@
 
 Source for the Multi-dimensional Knowledge Graphs (MKG) workshop website,
 ISWC 2026, Bari, Italy (25–26 Oct 2026).
+Still under development. 
 
 Built with Express + EJS templates and Bootstrap 5 via CDN. There is no
 JS bundler — `npm run build` just renders the EJS templates to plain
