@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chairs · MKG 2026</title>
+  <meta name="description" content="Multi-dimensional Knowledge Graphs (MKG) — a full-day Barstuhl workshop at ISWC 2026, Bari, Italy, 25–26 Oct 2026.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script>
+    /* Set the theme before first paint to avoid a light/dark flash. */
+    (function () {
+      try {
+        var stored = localStorage.getItem('mkg2026-theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-mkg sticky-top" id="site-nav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MKG <span class="font-serif-italic">@ ISWC 2026</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#" id="workshop-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Workshop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="workshop-dropdown">
+            <li><a class="dropdown-item" href="index.html#motivation">Motivation</a></li>
+            <li><a class="dropdown-item" href="index.html#objectives">Objectives</a></li>
+            <li><a class="dropdown-item" href="index.html#research">Research Questions</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="cfp.html">Expression of Interest</a></li>
+        <li class="nav-item"><a class="nav-link" href="format.html">Program</a></li>
+        <li class="nav-item"><a class="nav-link active" href="organizers.html">Chairs</a></li>
+      </ul>
+      <button type="button" class="theme-toggle ms-lg-3 mt-3 mt-lg-0" aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <section class="page-section">
+    <div class="container" style="max-width: 52rem;">
+      <h1 class="section-title">Chairs</h1>
+      <p class="lead mb-4">
+        Five chairs across four institutions and three countries, spanning a
+        junior/senior mix of researchers. Click a name for the full bio.
+      </p>
+
+      <div class="accordion accordion-mkg" id="chairs-accordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chair-nixon">
+              <span class="chair-name-compact">Lyndon Nixon</span>
+              <span class="chair-affil-compact">Storypact GmbH &amp; Modul University Vienna, Austria</span>
+            </button>
+          </h2>
+          <div id="chair-nixon" class="accordion-collapse collapse" data-bs-parent="#chairs-accordion">
+            <div class="accordion-body">
+              <img src="/assets/img/lyndon_nixon.jpg" alt="Lyndon Nixon" class="chair-photo">
+              <p>CIO at Storypact and Associate Professor in Applied Data Science; works
+                on knowledge modelling, AI-based extraction, and multimodal
+                understanding.</p>
+              <p class="mb-1"><a href="mailto:nixon@storypact.com">nixon@storypact.com</a>
+                &middot; <a href="mailto:lyndon.nixon@modul.ac.at">lyndon.nixon@modul.ac.at</a></p>
+              <a href="https://research.modul.ac.at/en/persons/lyndon-nixon/" class="card-link" target="_blank" rel="noopener">Homepage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chair-presutti">
+              <span class="chair-name-compact">Valentina Presutti</span>
+              <span class="chair-affil-compact">University of Bologna, Italy</span>
+            </button>
+          </h2>
+          <div id="chair-presutti" class="accordion-collapse collapse" data-bs-parent="#chairs-accordion">
+            <div class="accordion-body">
+              <img src="/assets/img/valentina_presutti.jpg" alt="Valentina Presutti" class="chair-photo">
+              <p>Associate Professor in Semantic Web and Knowledge Graphs; co-founded
+                WOP, co-directs ISWS, co-organised Dagstuhl Seminar 18371 on Knowledge
+                Graphs.</p>
+              <p class="mb-1"><a href="mailto:valentina.presutti@unibo.it">valentina.presutti@unibo.it</a></p>
+              <a href="https://www.unibo.it/sitoweb/valentina.presutti" class="card-link" target="_blank" rel="noopener">Homepage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chair-purohit">
+              <span class="chair-name-compact">Disha Purohit</span>
+              <span class="chair-affil-compact">Leibniz University Hannover (LUH), Germany</span>
+            </button>
+          </h2>
+          <div id="chair-purohit" class="accordion-collapse collapse" data-bs-parent="#chairs-accordion">
+            <div class="accordion-body">
+              <img src="/assets/img/disha.jpg" alt="Disha Purohit" class="chair-photo">
+              <p>Postdoctoral researcher in the VolkswagenStiftung
+                Zukunft.niedersachsen Program CAIMed; works on Data &amp; Knowledge
+                Engineering, KGs, neuro-symbolic AI, and explainable AI.</p>
+              <p class="mb-1"><a href="mailto:disha.purohit@tib.eu">disha.purohit@tib.eu</a></p>
+              <a href="https://www.tib.eu/de/forschung-entwicklung/forschungsgruppen-und-labs/scientific-data-management/mitarbeiterinnen-und-mitarbeiter/disha-purohit" class="card-link" target="_blank" rel="noopener">Homepage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chair-schimmenti">
+              <span class="chair-name-compact">Andrea Schimmenti</span>
+              <span class="chair-affil-compact">University of Bologna, Italy</span>
+            </button>
+          </h2>
+          <div id="chair-schimmenti" class="accordion-collapse collapse" data-bs-parent="#chairs-accordion">
+            <div class="accordion-body">
+              <img src="/assets/img/andrea_schimmenti.jpg" alt="Andrea Schimmenti" class="chair-photo">
+              <p>Postdoctoral researcher in the Horizon Europe project INFINITY;
+                Semantic Web technologies and NLP for ontology-driven KG extraction,
+                especially scholarly interpretations and debate representation.</p>
+              <p class="mb-1"><a href="mailto:andrea.schimmenti2@unibo.it">andrea.schimmenti2@unibo.it</a></p>
+              <a href="https://www.unibo.it/sitoweb/andrea.schimmenti2" class="card-link" target="_blank" rel="noopener">Homepage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chair-vidal">
+              <span class="chair-name-compact">Maria-Esther Vidal</span>
+              <span class="chair-affil-compact">LUH, TIB &amp; L3S, Germany</span>
+            </button>
+          </h2>
+          <div id="chair-vidal" class="accordion-collapse collapse" data-bs-parent="#chairs-accordion">
+            <div class="accordion-body">
+              <img src="/assets/img/esther_vidal.jpg" alt="Maria-Esther Vidal" class="chair-photo">
+              <p>Professor and Head of the Scientific Data Management Group; works on
+                KGs, data integration, and neuro-symbolic AI.</p>
+              <p class="mb-1"><a href="mailto:maria.vidal@tib.eu">maria.vidal@tib.eu</a></p>
+              <a href="https://www.tib.eu/de/forschung-entwicklung/forschungsgruppen-und-labs/scientific-data-management/mitarbeiterinnen-und-mitarbeiter/maria-esther-vidal" class="card-link" target="_blank" rel="noopener">Homepage</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer py-5 mt-5">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <div class="col-md-3 footer-logos">
+        <a href="https://infinity-eccch.eu/" target="_blank" rel="noopener" class="d-block mb-3">
+          <img src="assets/img/infinity-echoes-horizontal-dark.png"
+               data-theme-logo
+               data-src-light="assets/img/infinity-echoes-horizontal-dark.png"
+               data-src-dark="assets/img/infinity-echoes-horizontal.png"
+               alt="INFINITY project logo" class="footer-logo-img">
+        </a>
+        <a href="https://thirdwave.l3s.uni-hannover.de/" target="_blank" rel="noopener" class="d-block mb-3">
+          <img src="assets/img/thirdwave.webp" alt="THIRDWAVE project logo" class="footer-logo-img">
+        </a>
+        <img src="assets/img/eu_claim_positive.png"
+             data-theme-logo
+             data-src-light="assets/img/eu_claim_positive.png"
+             data-src-dark="assets/img/eu_claim_negative.png"
+             alt="Funded by the European Union — Horizon Europe, Grant Agreement No. 101233051 (project INFINITY) and No. 101236394 (project THIRDWAVE)."
+             class="eu-claim-img">
+      </div>
+
+      <div class="col-md-6 eu-ack">
+        <p class="mb-2">
+          The Multi-dimensional Knowledge Graphs (MKG) Workshop is supported by the
+          European Union through the Horizon Europe projects <strong>INFINITY</strong>
+          (Grant Agreement No. 101233051) and <strong>THIRDWAVE</strong>
+          (Grant Agreement No. 101236394).
+        </p>
+        <p class="mb-2">
+          The workshop contributes to advancing research on contextual, perspectival,
+          and temporal knowledge representation, fostering collaboration across the
+          Semantic Web, Knowledge Graph, and Neuro-symbolic AI communities.
+        </p>
+        <p class="mb-0">
+          <strong>Disclaimer.</strong> The views and opinions expressed on this website
+          are those of the workshop organizers only and do not necessarily reflect those
+          of the European Union or the European Commission.
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <p class="mb-1">
+          Multi-dimensional Knowledge Graphs (MKG) Workshop<br>
+          ISWC 2026 &middot; Bari, Italy &middot; 25&ndash;26 Oct 2026
+        </p>
+        <p class="mb-3">
+          <!-- TODO: replace with a dedicated workshop alias once one exists -->
+          <a href="mailto:andrea.schimmenti2@unibo.it">andrea.schimmenti2@unibo.it</a><br>
+          <a href="mailto:valentina.presutti@unibo.it">valentina.presutti@unibo.it</a>
+        </p>
+        <button type="button" class="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
