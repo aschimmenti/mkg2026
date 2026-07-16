@@ -4,13 +4,9 @@ const path = require('path');
 
 const pages = [
   'index',
-  'topics',
-  'format',
-  'outcomes',
   'cfp',
+  'format',
   'organizers',
-  'registration',
-  'contact',
 ];
 
 const viewsDir = path.join(__dirname, 'views');

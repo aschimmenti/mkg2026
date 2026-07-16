@@ -4,16 +4,13 @@ const path = require('path');
 const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views', 'pages'));
+app.use('/assets', express.static(path.join(__dirname, 'public', 'assets')));
 
 const pages = [
   'index',
-  'topics',
-  'format',
-  'outcomes',
   'cfp',
+  'format',
   'organizers',
-  'registration',
-  'contact',
 ];
 
 for (const page of pages) {

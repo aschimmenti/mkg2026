@@ -1,30 +1,46 @@
-<%- include('../partials/head', {title: 'Format & Schedule'}) %>
-<%- include('../partials/nav') %>
+<%- include('../partials/head', {title: 'Program'}) %>
+<%- include('../partials/nav', {current: 'format'}) %>
 
-<main class="container py-5">
-  <h1>Format &amp; Schedule</h1>
-  <p class="lead">A full-day, Dagstuhl-style ("Barstuhl") workshop: discussion-driven,
-    not a paper track.</p>
+<main>
+  <section class="page-section">
+    <div class="container">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <h1 class="section-title mb-0">Program</h1>
+        <span class="badge-tbd">Provisional &mdash; full schedule to follow</span>
+      </div>
+      <p class="lead" style="max-width: 48rem;">
+        A full-day, Dagstuhl-style (&ldquo;Barstuhl&rdquo;) workshop: discussion-driven,
+        not a paper track. The shape below reflects the accepted proposal; exact timings
+        will be finalized closer to the workshop day. 
+        A Zotero group will be created for collaborative bibliography management. 
+      </p>
 
-  <ol class="list-group list-group-numbered mb-5">
-    <li class="list-group-item">
-      <strong>Plenary lightning pitches</strong> &middot; ~90 minutes<br>
-      Short position-statement pitches from all participants to surface perspectives
-      and form breakout groups.
-    </li>
-    <li class="list-group-item">
-      <strong>Breakout sessions</strong> &middot; ~180 minutes<br>
-      Three parallel groups, one per topic pillar (see <a href="topics.html">Topics</a>),
-      with a reshuffle partway through so participants engage with more than one pillar.
-    </li>
-    <li class="list-group-item">
-      <strong>Alignment &amp; synthesis plenary</strong> &middot; 60&ndash;90 minutes<br>
-      Breakout groups report back; the room converges on shared conclusions and next steps.
-    </li>
-  </ol>
+      <ol class="list-group list-group-numbered mb-4" style="max-width: 48rem;">
+        <li class="list-group-item card-mkg mb-3 border-0">
+          <strong>Plenary pitch session</strong> &middot; ~90 minutes<br>
+          Selected lightning pitches balancing the theoretical/logician and
+          engineering/database perspectives.
+        </li>
+        <li class="list-group-item card-mkg mb-3 border-0">
+          <strong>Breakout working sessions</strong> &middot; ~180 minutes<br>
+          Three parallel pillars &mdash; (a) Reference Use Cases, (b) Engineering
+          Challenges, (c) Foundational Models (see <a href="index.html#research">Research
+          questions</a>) &mdash; run as three 60-minute rounds with participant
+          reshuffling; each group drafts sections of the community document.
+        </li>
+        <li class="list-group-item card-mkg border-0">
+          <strong>Alignment &amp; synthesis plenary</strong> &middot; 60&ndash;90 minutes<br>
+          Reconcile breakout outputs, resolve friction, and set the roadmap and writing
+          assignments for the White Paper.
+        </li>
+      </ol>
 
-  <p>Exact timings and room assignment will be finalized closer to the workshop day
-    (25 or 26 October 2026, assigned by the ISWC chairs).</p>
+      <p style="max-width: 48rem;">
+        Exact timings and room assignment will be finalized closer to the workshop day
+        (25 or 26 October 2026, exact day assigned by the ISWC chairs).
+      </p>
+    </div>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>

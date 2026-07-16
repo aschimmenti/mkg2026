@@ -1,26 +1,172 @@
-<%- include('../partials/head', {title: 'Call for Participation'}) %>
-<%- include('../partials/nav') %>
+<%- include('../partials/head', {title: 'Expression of Interest'}) %>
+<%- include('../partials/nav', {current: 'cfp'}) %>
 
-<main class="container py-5">
-  <h1>Call for Participation</h1>
-  <p class="lead">MKG 2026 is <strong>open to all ISWC attendees</strong> &mdash; no
-    submission is required to attend.</p>
-
-  <div class="alert alert-warning">
-    <strong>Decision needed:</strong> the details below are placeholders pending an
-    organizer decision on whether lightning pitches are curated or open to all submitters.
+<header class="hero hero--compact" id="top">
+  <div class="hero-visual">
+    <canvas class="hero__mesh" id="hero-mesh" aria-hidden="true"></canvas>
+    <div class="hero__scrim"></div>
+    <div class="container hero__content py-5">
+      <h1 class="mt-3 mb-2">Expression of Interest</h1>
+      <p class="lead" style="max-width: 46rem;">
+        MKG 2026 is <strong>open to all ISWC attendees</strong> &mdash; no submission is
+        required to attend. Use the form below to tell us how you'd like to be involved.
+      </p>
+    </div>
   </div>
+</header>
 
-  <h2>Lightning-pitch / position statements</h2>
-  <ul>
-    <li><strong>Who should submit:</strong> [TODO]</li>
-    <li><strong>Format &amp; length:</strong> [TODO &mdash; e.g. 1-page position statement / short abstract]</li>
-    <li><strong>Submission channel:</strong> [TODO &mdash; email / EasyChair / form]</li>
-    <li><strong>Deadline:</strong> [TODO &mdash; suggested 2&ndash;4 weeks before 25 Oct 2026]</li>
-  </ul>
+<main>
+  <section class="page-section">
+    <div class="container">
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. [TODO: replace with final call text.]</p>
+      <div class="notice-block mb-3" style="max-width: 46rem;">
+        <strong>Selection notice.</strong> Lightning talks will be <strong>selected</strong>
+        for presentation (limited slots). <strong>All accepted abstracts will be
+        published</strong> on this site and in any workshop proceedings/report.
+      </div>
+
+      <table class="table table-borderless mb-5" style="max-width: 46rem;">
+        <tbody>
+          <tr>
+            <th scope="row" class="ps-0">Lightning-pitch / EoI deadline</th>
+            <td><em>[TODO &mdash; provisionally 1 October 2026, ~3 weeks before the workshop]</em></td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-0">Notification of acceptance</th>
+            <td><em>[TODO &mdash; provisionally 2 weeks after the deadline]</em></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="ratio mb-3" style="max-width: 46rem; --bs-aspect-ratio: 130%;">
+        <iframe src="https://forms.gle/qw6dWKDmcQM34DdV9" title="MKG 2026 Expression of Interest form"
+          loading="lazy" class="border rounded">
+          Loading the form&hellip;
+        </iframe>
+      </div>
+      <p style="max-width: 46rem;">
+        Trouble seeing the form above?
+        <a href="https://forms.gle/qw6dWKDmcQM34DdV9" target="_blank" rel="noopener">Open it in a new tab</a>.
+      </p>
+
+      <div class="mt-5" style="max-width: 46rem;">
+        <button class="btn btn-mkg-outline btn-lg read-more-toggle mb-3" type="button"
+          data-bs-toggle="collapse" data-bs-target="#privacy-notice"
+          aria-expanded="false" aria-controls="privacy-notice">
+          Privacy Notice <span class="caret" aria-hidden="true">&#9662;</span>
+        </button>
+
+        <div class="collapse" id="privacy-notice">
+          <div class="card-mkg">
+            <div class="card-body">
+              <h2 class="h5">Privacy Notice for the Expression of Interest Form</h2>
+              <p class="text-body-secondary fst-italic">Last updated: July 2026</p>
+
+              <p>
+                This Privacy Notice explains how the personal data collected through the
+                Expression of Interest Form for the Multi-dimensional Knowledge Graphs (MKG)
+                Barstuhl Workshop at ISWC 2026 is processed.
+              </p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Data Controller</h3>
+              <p>The personal data submitted through this form is jointly managed by the
+                workshop organizing committee:</p>
+              <ul>
+                <li>Andrea Schimmenti &ndash; University of Bologna (INFINITY Project)</li>
+                <li>Lyndon Nixon &ndash; Storypact / Modul University Vienna</li>
+                <li>Valentina Presutti &ndash; University of Bologna</li>
+                <li>Maria-Esther Vidal &ndash; TIB Leibniz Information Centre for Science and Technology</li>
+                <li>Disha Purohit &ndash; TIB Leibniz Information Centre for Science and Technology</li>
+              </ul>
+              <p>
+                For any questions regarding this Privacy Notice or the processing of your
+                personal data, please contact:<br>
+                Andrea Schimmenti, University of Bologna &middot;
+                <a href="mailto:andrea.schimmenti2@unibo.it">andrea.schimmenti2@unibo.it</a>
+              </p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">What information we collect</h3>
+              <p>Depending on your submission, we may collect:</p>
+              <ul>
+                <li>First and last name</li>
+                <li>Email address</li>
+                <li>Affiliation or organization</li>
+                <li>Professional position</li>
+                <li>Workshop participation preferences</li>
+                <li>Preferred breakout working groups</li>
+                <li>Lightning talk proposal (title, abstract, keywords)</li>
+                <li>Optional comments or additional information</li>
+                <li>Your consent regarding future communications and networking</li>
+              </ul>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Purpose of processing</h3>
+              <p>Your personal data is processed exclusively to:</p>
+              <ul>
+                <li>manage expressions of interest for the MKG Workshop;</li>
+                <li>organize breakout groups and workshop activities;</li>
+                <li>evaluate lightning talk proposals;</li>
+                <li>communicate workshop-related information;</li>
+                <li>contact selected lightning talk presenters;</li>
+                <li>coordinate the post-workshop white paper, if applicable;</li>
+                <li>facilitate networking among participants only where explicit consent has been provided.</li>
+              </ul>
+              <p>Your personal data will never be used for marketing purposes or shared with
+                third parties unrelated to the workshop.</p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Legal basis</h3>
+              <p>
+                The processing of your personal data is based on your consent under
+                Article 6(1)(a) of the General Data Protection Regulation (EU) 2016/679 (GDPR).
+              </p>
+              <p>You may withdraw your consent at any time by contacting the organizers.</p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Data storage and retention</h3>
+              <p>
+                Responses are securely stored using Google Forms and Google Sheets, which act
+                as data processors on behalf of the organizers.
+              </p>
+              <p>
+                Personal data will be retained only for as long as necessary to organize the
+                workshop and any directly related follow-up activities (such as the workshop
+                white paper), and in any case no longer than 24 months after the workshop,
+                unless a longer retention period is required by law or further consent is
+                obtained.
+              </p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Data sharing</h3>
+              <p>Your personal data will be accessible only to the workshop organizers.</p>
+              <p>
+                If you explicitly consent to networking, your name, affiliation, and email
+                address may be shared with other workshop participants after the event.
+              </p>
+              <p>No other personal data will be disclosed without your consent.</p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Your rights</h3>
+              <p>Under the GDPR, you have the right to:</p>
+              <ul>
+                <li>access your personal data;</li>
+                <li>request correction of inaccurate data;</li>
+                <li>request deletion of your data;</li>
+                <li>restrict or object to processing;</li>
+                <li>withdraw your consent at any time;</li>
+                <li>request a copy of your personal data;</li>
+                <li>lodge a complaint with your national data protection authority.</li>
+              </ul>
+              <p>Requests can be sent to the contact address above.</p>
+
+              <h3 class="h6 text-uppercase text-body-secondary mt-4">Changes to this Privacy Notice</h3>
+              <p class="mb-0">
+                This Privacy Notice may be updated to reflect organizational or legal changes.
+                The latest version will always be available on this website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 </main>
 
+<script src="assets/js/hero-mesh.js"></script>
 <%- include('../partials/footer') %>

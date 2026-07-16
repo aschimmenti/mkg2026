@@ -1,95 +1,438 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home · MKG 2026</title>
+  <meta name="description" content="Multi-dimensional Knowledge Graphs (MKG) — a full-day Barstuhl workshop at ISWC 2026, Bari, Italy, 25–26 Oct 2026.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script>
+    /* Set the theme before first paint to avoid a light/dark flash. */
+    (function () {
+      try {
+        var stored = localStorage.getItem('mkg2026-theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-mkg sticky-top" id="site-nav">
   <div class="container">
-    <a class="navbar-brand" href="index.html">MKG 2026</a>
+    <a class="navbar-brand" href="index.html">MKG <span class="font-serif-italic">@ ISWC 2026</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
-        <li class="nav-item"><a class="nav-link" href="format.html">Format</a></li>
-        <li class="nav-item"><a class="nav-link" href="outcomes.html">Outcomes</a></li>
-        <li class="nav-item"><a class="nav-link" href="cfp.html">Call for Participation</a></li>
-        <li class="nav-item"><a class="nav-link" href="organizers.html">Organizers</a></li>
-        <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active"
+             href="#" id="workshop-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Workshop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="workshop-dropdown">
+            <li><a class="dropdown-item" href="index.html#motivation">Motivation</a></li>
+            <li><a class="dropdown-item" href="index.html#objectives">Objectives</a></li>
+            <li><a class="dropdown-item" href="index.html#research">Research Questions</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="cfp.html">Expression of Interest</a></li>
+        <li class="nav-item"><a class="nav-link" href="format.html">Program</a></li>
+        <li class="nav-item"><a class="nav-link" href="organizers.html">Chairs</a></li>
       </ul>
+      <button type="button" class="theme-toggle ms-lg-3 mt-3 mt-lg-0" aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+      </button>
     </div>
   </div>
 </nav>
 
 
-<header class="bg-primary text-white text-center py-5">
-  <div class="container">
-    <h1 class="display-5 fw-bold">Multi-dimensional Knowledge Graphs (MKG)</h1>
-    <p class="lead mb-0">Full-day Dagstuhl-Style Workshop @ ISWC 2026, Bari, Italy &middot; 25&ndash;26 October 2026</p>
-    <p class="fst-italic mb-0">Discussion-driven, not a paper track.</p>
+<nav class="side-dots d-none d-lg-flex flex-column" aria-label="Jump to section">
+  <a href="#top" data-nav-link aria-label="Home"><span class="dot-label">Home</span></a>
+  <a href="#motivation" data-nav-link aria-label="Motivation"><span class="dot-label">Motivation</span></a>
+  <a href="#objectives" data-nav-link aria-label="Objectives"><span class="dot-label">Objectives</span></a>
+  <a href="#research" data-nav-link aria-label="Research questions"><span class="dot-label">Research questions</span></a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-visual">
+    <canvas class="hero__mesh" id="hero-mesh" aria-hidden="true"></canvas>
+    <div class="hero__scrim"></div>
+    <div class="container hero__content py-5">
+      <a class="eyebrow text-decoration-none" href="#" target="_blank" rel="noopener" title="TODO: link to the official ISWC 2026 site">
+        Barstuhl Workshop &middot; ISWC 2026 &middot; Bari &middot; 25&ndash;26 Oct 2026
+      </a>
+      <h1 class="mt-3 mb-2">Multi-dimensional Knowledge Graphs (MKG)</h1>
+      <p class="mb-4">
+        Held during the <a href="#" target="_blank" rel="noopener">ISWC 2026 Pre-conference Days</a>
+        &mdash; the International Semantic Web Conference, Bari, Italy.
+      <a href="https://iswc2026.semanticweb.org/" class="card-link" target="_blank" rel="noopener">Official ISWC 2026 Site</a>
+
+      </p>
+      <p class="lead" style="max-width: 46rem;">
+        MKG as a paradigm for <strong>contextual, perspectival, and temporal</strong>
+        knowledge representation.
+      </p>
+      <p style="max-width: 46rem;">
+        For <strong>logicians, ontology and KG engineers, neuro-symbolic AI researchers,
+        and domain practitioners.</strong>
+      </p>
+      <p style="max-width: 46rem;">
+        Outcome: a <strong> white paper on MKG and a draft Dagstuhl workshop proposal .</strong>
+      </p>
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a href="cfp.html" class="btn btn-mkg-primary btn-lg">Submit an Expression of Interest</a>
+        <a href="#motivation" class="btn btn-mkg-outline btn-lg">Read the motivation</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <p style="max-width: 50rem;">
+      Mainstream Knowledge Graphs (KGs) often assume a monolithic notion of truth,
+      offering limited support for context-dependent validity, conflicting viewpoints,
+      knowledge evolution, and concept drift. This full-day <i>Barstuhl</i> workshop introduces
+      <strong>Multi-dimensional Knowledge Graphs (MKGs)</strong> as an umbrella paradigm for contextual,
+      perspectival, and temporal knowledge representation. The main outcome is a
+      community-driven framework document that will serve as the foundation for an
+      MKG white paper and a potential future Dagstuhl seminar.
+    </p>
+
+    <div class="row g-4 mt-2">
+      <div class="col-md-4">
+        <div class="card-mkg">
+          <div class="card-body">
+            <h2 class="h5">Motivation</h2>
+            <p class="mb-3">Why context, perspective, and time break monolithic KGs.</p>
+            <a href="#motivation" class="btn btn-mkg-outline btn-sm">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-mkg">
+          <div class="card-body">
+            <h2 class="h5">Research questions</h2>
+            <p class="mb-3">Foundational and computational challenges the workshop tackles.</p>
+            <a href="#research" class="btn btn-mkg-outline btn-sm">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-mkg">
+          <div class="card-body">
+            <h2 class="h5">Participate</h2>
+            <p class="mb-3">Attend, propose a lightning talk, or just follow the outcomes.</p>
+            <a href="cfp.html" class="btn btn-mkg-outline btn-sm">Expression of Interest</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
-<main class="container py-5">
-  <section class="mb-5">
-    <h2>About</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. [TODO: replace with the
-      ~150&ndash;200 word abstract from the accepted proposal.] Sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
-    <p><strong>Note:</strong> there are no formal paper presentations at this workshop &mdash;
-      participation is via lightning pitches and open discussion.
-      See <a href="cfp.html">Call for Participation</a>.</p>
+<main>
+
+  <!-- Motivation -->
+  <section id="motivation" class="page-section">
+    <div class="container">
+      <div style="max-width: 52rem;">
+        <h2 class="section-title">Motivation</h2>
+
+        <p>
+          KGs are central infrastructures for semantic interoperability, data integration,
+          and structured knowledge representation across scientific, cultural, and
+          industrial domains. However, many KG formalisms and engineering practices still
+          treat statements as if their validity were independent of the conditions under
+          which they are produced, interpreted, accepted, revised, or queried. This
+          assumption becomes limiting in domains where knowledge is contextual, evolving,
+          contested, or perspectival, and where statements may depend on provenance,
+          temporal scope, epistemic status, methodological assumptions, community
+          viewpoints, or changing conceptual frameworks.
+        </p>
+
+        <button class="btn btn-mkg-primary btn-lg read-more-toggle mb-3" type="button"
+          data-bs-toggle="collapse" data-bs-target="#motivation-more"
+          aria-expanded="false" aria-controls="motivation-more">
+          Read the full motivation <span class="caret" aria-hidden="true">&#9662;</span>
+        </button>
+
+        <div class="collapse" id="motivation-more">
+          <p>
+            The Semantic Web already offers several mechanisms for contextualising
+            statements &mdash; RDF Reification, N-ary Relations, Named Graphs, RDF-star /
+            RDF 1.2, provenance vocabularies such as PROV-O, Nanopublications, Wikidata-style
+            qualifiers, Singleton Properties, Temporal Knowledge Graphs, fluents-based models, and specific semantics such as Conjectures. 
+            These provide important building blocks but differ in granularity, semantics, and operational
+            assumptions. The open challenge is not only how to attach metadata to statements,
+            but how to represent, query, and reason over the conditions under which
+            statements are valid, applicable, contested, superseded, perspectival, or
+            meaningful across multiple heterogeneous dimensions.
+            A Zotero group will be created for collaborative bibliography management. 
+          </p>
+
+          <h3 class="h5 mt-4">Timeliness</h3>
+          <p>
+            Although contextual and multi-perspective modelling has long been considered in
+            Knowledge Engineering, existing solutions often remain local, pattern-based, or
+            tied to specific modelling tasks. A community-wide re-evaluation is timely
+            because KGs increasingly ground neuro-symbolic systems and
+            Retrieval-Augmented Generation, while current symbolic representations still
+            struggle to expose provenance boundaries, temporal scope, disagreement, and
+            concept drift. The community addresses related problems through fragmented
+            notions such as contexts, perspectives, layers, lenses, views, and possible
+            worlds. MKGs offer an umbrella concept for comparing these strands and
+            identifying the trade-off between formal expressivity and scalable
+            storage/query execution.
+          </p>
+
+          <h3 class="h5 mt-4">Why a Barstuhl format</h3>
+          <p class="mb-0">
+            This agenda is best developed through an interactive format rather than
+            standard paper presentations. The workshop uses lightning talks, breakouts, and
+            plenary synthesis to bring foundational, database, neuro-symbolic, and domain
+            perspectives into direct dialogue and to produce a shared roadmap for future
+            MKG research.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="mb-5">
-    <h2>Important dates</h2>
-    <table class="table table-bordered">
-      <tbody>
-        <tr><th scope="row">Lightning-pitch / position statement deadline</th><td>[TODO &mdash; suggest 2&ndash;4 weeks before the workshop]</td></tr>
-        <tr><th scope="row">Notification of acceptance</th><td>[TODO, if pitches are curated]</td></tr>
-        <tr><th scope="row">Workshop day</th><td>25 or 26 October 2026 (exact day TBD by chairs)</td></tr>
-      </tbody>
-    </table>
+  <!-- Objectives & expected outcomes -->
+  <section id="objectives" class="page-section">
+    <div class="container">
+      <div style="max-width: 52rem;">
+        <h2 class="section-title">Objectives &amp; expected outcomes</h2>
+        <p>
+          The workshop serves as a collaborative incubator to produce a
+          community-drafted manifesto and framework document. This document is the
+          immediate foundation for a co-authored <strong>White Paper on Multi-dimensional
+          Knowledge Graphs</strong>, capturing a unified set of research questions,
+          concrete engineering challenges, and pragmatic, cross-domain reference use
+          cases. It will be shared through the workshop website, Zenodo, and/or an open
+          collaborative repository, and may form the basis for a future
+          <strong>Dagstuhl seminar proposal.</strong>
+        </p>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="card-mkg">
+            <div class="card-body">
+              <h3 class="h5">Manifesto / framework document</h3>
+              <p class="mb-0">A collaboratively drafted framing document capturing the
+                workshop's discussions and points of consensus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-mkg">
+            <div class="card-body">
+              <h3 class="h5">MKG White Paper</h3>
+              <p class="mb-0">A more developed white paper building on the manifesto,
+                intended for wider community dissemination.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-mkg">
+            <div class="card-body">
+              <h3 class="h5">Possible Dagstuhl seminar</h3>
+              <p class="mb-0">A potential follow-up Dagstuhl seminar proposal, continuing
+                the discussion in a dedicated venue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4" style="max-width: 52rem;">Outcomes will be disseminated via this
+        website, Zenodo, and/or an open repository.</p>
+    </div>
   </section>
 
-  <section class="row text-center g-4">
-    <div class="col-md-4">
-      <h3>Topics</h3>
-      <p>Three interconnected challenges in multi-dimensional knowledge graphs.</p>
-      <a href="topics.html" class="btn btn-outline-primary">Explore topics</a>
-    </div>
-    <div class="col-md-4">
-      <h3>Format</h3>
-      <p>Plenary lightning pitches, breakout groups, synthesis plenary.</p>
-      <a href="format.html" class="btn btn-outline-primary">See the schedule</a>
-    </div>
-    <div class="col-md-4">
-      <h3>Participate</h3>
-      <p>Open to all ISWC attendees &mdash; no submission required to attend.</p>
-      <a href="cfp.html" class="btn btn-outline-primary">Call for participation</a>
+  <!-- Research questions & engineering challenges -->
+  <section id="research" class="page-section">
+    <div class="container">
+      <h2 class="section-title">Research questions &amp; engineering challenges</h2>
+      <p class="lead mb-4" style="max-width: 48rem;">
+        Two interlocking tracks &mdash; formal foundations and computational engineering &mdash;
+        frame the workshop's breakout sessions.
+      </p>
+
+      <ul class="nav nav-pills nav-pills-mkg mb-4" id="research-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-foundational" data-bs-toggle="tab"
+            data-bs-target="#pane-foundational" type="button" role="tab"
+            aria-controls="pane-foundational" aria-selected="true">Foundational track</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-computational" data-bs-toggle="tab"
+            data-bs-target="#pane-computational" type="button" role="tab"
+            aria-controls="pane-computational" aria-selected="false">Computational track</button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="pane-foundational" role="tabpanel" aria-labelledby="tab-foundational">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card-mkg border-wg-a">
+                <div class="card-body">
+                  <span class="wg-badge wg-a mb-2">RQ1 &middot; Formal foundations</span>
+                  <p class="mt-3 mb-0">What minimal, sound formalisms can natively represent
+                    multi-dimensional assertions (time, perspective, stance) while
+                    preserving W3C backward compatibility?</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-mkg border-wg-a">
+                <div class="card-body">
+                  <span class="wg-badge wg-a mb-2">RQ2 &middot; Epistemological alignment</span>
+                  <p class="mt-3 mb-0">How can we align divergent, contradictory dimensions or
+                    conflicting ontologies within the same graph without triggering logical
+                    inconsistency?</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-mkg border-wg-a">
+                <div class="card-body">
+                  <span class="wg-badge wg-a mb-2">RQ3 &middot; Concept drift</span>
+                  <p class="mt-3 mb-0">What formalisms let a model track and query the
+                    historical evolution of a concept's meaning over time without schema
+                    fragmentation?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="pane-computational" role="tabpanel" aria-labelledby="tab-computational">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card-mkg border-wg-b">
+                <div class="card-body">
+                  <span class="wg-badge wg-b mb-2">EC1 &middot; Query &amp; storage</span>
+                  <p class="mt-3 mb-0">How should query languages, storage models, and
+                    indexing strategies evolve to efficiently support querying over multiple
+                    contextual dimensions?</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-mkg border-wg-b">
+                <div class="card-body">
+                  <span class="wg-badge wg-b mb-2">EC2 &middot; Scalable evolution</span>
+                  <p class="mt-3 mb-0">How can storage engines efficiently manage temporal
+                    evolution, concept drift, and multiple graph versions without excessive
+                    data duplication or query overhead?</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-mkg border-wg-c">
+                <div class="card-body">
+                  <span class="wg-badge wg-c mb-2">EC3 &middot; Interoperability &amp; AI</span>
+                  <p class="mt-3 mb-0">How can multi-dimensional KGs provide a scalable
+                    symbolic foundation for neuro-symbolic AI, Retrieval-Augmented
+                    Generation, and other AI systems while preserving contextual
+                    semantics?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4" style="max-width: 48rem;">
+        <h3 class="h6 text-uppercase text-body-secondary">Breakout working groups</h3>
+        <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
+          <li><span class="wg-badge wg-a">(a)</span> Formal models</li>
+          <li><span class="wg-badge wg-b">(b)</span> Query, storage &amp; indexing</li>
+          <li><span class="wg-badge wg-c">(c)</span> Benchmarks &amp; use cases</li>
+        </ul>
+      </div>
     </div>
   </section>
+
 </main>
 
-<footer class="bg-dark text-light text-center py-4 mt-5">
+<script src="assets/js/hero-mesh.js"></script>
+<footer class="site-footer py-5 mt-5">
   <div class="container">
-    <p class="mb-1">Multi-dimensional Knowledge Graphs (MKG) Workshop &middot; ISWC 2026, Bari, Italy &middot; 25&ndash;26 Oct 2026</p>
-    <p class="mb-0"><a class="text-light" href="contact.html">Contact us</a></p>
+    <div class="row g-4 align-items-start">
+
+      <div class="col-md-3 footer-logos">
+        <a href="https://infinity-eccch.eu/" target="_blank" rel="noopener" class="d-block mb-3">
+          <img src="assets/img/infinity-echoes-horizontal-dark.png"
+               data-theme-logo
+               data-src-light="assets/img/infinity-echoes-horizontal-dark.png"
+               data-src-dark="assets/img/infinity-echoes-horizontal.png"
+               alt="INFINITY project logo" class="footer-logo-img">
+        </a>
+        <a href="https://thirdwave.l3s.uni-hannover.de/" target="_blank" rel="noopener" class="d-block mb-3">
+          <img src="assets/img/thirdwave.webp" alt="THIRDWAVE project logo" class="footer-logo-img">
+        </a>
+        <img src="assets/img/eu_claim_positive.png"
+             data-theme-logo
+             data-src-light="assets/img/eu_claim_positive.png"
+             data-src-dark="assets/img/eu_claim_negative.png"
+             alt="Funded by the European Union — Horizon Europe, Grant Agreement No. 101233051 (project INFINITY) and No. 101236394 (project THIRDWAVE)."
+             class="eu-claim-img">
+      </div>
+
+      <div class="col-md-6 eu-ack">
+        <p class="mb-2">
+          The Multi-dimensional Knowledge Graphs (MKG) Workshop is supported by the
+          European Union through the Horizon Europe projects <strong>INFINITY</strong>
+          (Grant Agreement No. 101233051) and <strong>THIRDWAVE</strong>
+          (Grant Agreement No. 101236394).
+        </p>
+        <p class="mb-2">
+          The workshop contributes to advancing research on contextual, perspectival,
+          and temporal knowledge representation, fostering collaboration across the
+          Semantic Web, Knowledge Graph, and Neuro-symbolic AI communities.
+        </p>
+        <p class="mb-0">
+          <strong>Disclaimer.</strong> The views and opinions expressed on this website
+          are those of the workshop organizers only and do not necessarily reflect those
+          of the European Union or the European Commission.
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <p class="mb-1">
+          Multi-dimensional Knowledge Graphs (MKG) Workshop<br>
+          ISWC 2026 &middot; Bari, Italy &middot; 25&ndash;26 Oct 2026
+        </p>
+        <p class="mb-3">
+          <!-- TODO: replace with a dedicated workshop alias once one exists -->
+          <a href="mailto:andrea.schimmenti2@unibo.it">andrea.schimmenti2@unibo.it</a><br>
+          <a href="mailto:valentina.presutti@unibo.it">valentina.presutti@unibo.it</a>
+        </p>
+        <button type="button" class="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+
+    </div>
   </div>
 </footer>
+
+<button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
 
