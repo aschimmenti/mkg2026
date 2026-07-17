@@ -6,7 +6,7 @@ Still under development.
 
 Built with Express + EJS templates and Bootstrap 5 via CDN. There is no
 JS bundler — `npm run build` just renders the EJS templates to plain
-`.html` files, since Codeberg Pages only serves static files (it cannot
+`.html` files, since GitHub Pages only serves static files (it cannot
 run a live Node server).
 
 ## Structure
@@ -32,25 +32,21 @@ npm run dev       # preview at http://localhost:3000
 npm run build      # writes public/*.html
 ```
 
-## Deploy to Codeberg Pages
+## Deploy to GitHub Pages
 
-Codeberg Pages serves static content from a branch (by default `pages`)
-in the repo. This repo is a named project repo
-(`https://codeberg.org/aschimmenti/mkg2026`), so once Pages is enabled
-the site is served at `https://aschimmenti.codeberg.page/mkg2026/`.
-Double-check the exact branch/path conventions against the current
-Codeberg Pages docs (docs.codeberg.org) in case they've changed.
+The site is served from `https://aschimmenti.github.io/mkg2026/`, with
+GitHub Pages configured to serve the `pages` branch of
+`https://github.com/aschimmenti/mkg2026`.
 
 The `deploy` script builds the site and pushes the `public/` folder to
-the `pages` branch of the `origin` remote using the `gh-pages` npm
-package (works with any git remote, not just GitHub, despite the name):
+that `pages` branch using the `gh-pages` npm package:
 
 ```sh
 npm run deploy
 ```
 
-Make sure `origin` is set to the Codeberg remote and that you can push
-to it (SSH key or token configured) before running this.
+Make sure you can push to `https://github.com/aschimmenti/mkg2026.git`
+(SSH key or token configured) before running this.
 
 ## Content still needed (marked `[TODO]` in the pages)
 
